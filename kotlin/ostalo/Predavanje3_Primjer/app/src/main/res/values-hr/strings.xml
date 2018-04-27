@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lovac na lozinke</string>
+    <string name="password_welcomeMessage">Bok korisniče.</string>
+    <string name="password_hintEntry">Unesite lozinku molim</string>
+    <string name="password_savePassword">Pohrani lozinku</string>
+</resources>
