@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="textSize_large">45sp</dimen>
+    <dimen name="textSize_normal">20sp</dimen>
+    <dimen name="task_taskPriority_width">50dp</dimen>
+</resources>
