@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <EditText
+        android:id="@+id/edittext_newtask_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/newTask_title_hint"/>
+
+    <EditText
+        android:id="@+id/edittext_newtask_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext_newtask_title"
+        android:hint="@string/newTask_description_hint"/>
+    <Spinner
+        android:id="@+id/spinner_newtask_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext_newtask_description"
+        android:layout_centerHorizontal="true"/>
+    <ImageButton
+        android:id="@+id/imagebutton_newtask_savetask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_newtask_priority"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_menu_save"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Taskie</string>
+    <string name="newTask_title_hint">Enter title</string>
+    <string name="newTask_description_hint">Enter description</string>
+</resources>
