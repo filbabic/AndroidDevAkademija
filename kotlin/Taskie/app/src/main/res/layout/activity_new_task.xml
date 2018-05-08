@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/newTaskTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/newTask_title_hint" />
+
+    <EditText
+        android:id="@+id/newTaskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/newTaskTitle"
+        android:hint="@string/newTask_description_hint" />
+
+    <Spinner
+        android:id="@+id/newTaskPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/newTaskDescription"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/saveTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/newTaskPriority"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_menu_save" />
+</RelativeLayout>

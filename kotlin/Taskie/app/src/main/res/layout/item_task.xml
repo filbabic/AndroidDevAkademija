@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/taskPriority"
+        android:layout_width="@dimen/task_taskPriority_width"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/taskDescription"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@color/taskPriority_Unknown" />
+
+    <TextView
+        android:id="@+id/taskTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/taskPriority"
+        android:layout_toStartOf="@id/taskPriority"
+        android:textSize="@dimen/textSize_large" />
+
+    <TextView
+        android:id="@id/taskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskTitle"
+        android:layout_toLeftOf="@id/taskPriority"
+        android:layout_toStartOf="@id/taskPriority"
+        android:textSize="@dimen/textSize_normal" />
+
+</RelativeLayout>
