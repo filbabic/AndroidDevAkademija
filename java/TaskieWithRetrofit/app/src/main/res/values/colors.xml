@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="taskPriority_Unknown">@color/gray</color>
+    <color name="gray">#999999</color>
+    <color name="taskpriority_low">@color/green</color>
+    <color name="taskpriority_medium">@color/yellow</color>
+    <color name="taskpriority_high">@color/red</color>
+    <color name="green">#159159</color>
+    <color name="yellow">#FFF159</color>
+    <color name="red">#FF1741</color>
+</resources>
