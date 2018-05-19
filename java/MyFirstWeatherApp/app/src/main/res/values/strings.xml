@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="add_a_new_location">New location</string>
+    <string name="browse_previous_locations">Previous locations</string>
+    <string name="enter_a_city_e_g_london">Enter a city e.g. London</string>
+    <string name="weather_icon">Weather Icon</string>
+    <string name="add_new_location">Add new location.</string>
+    <string name="location_added_success_toast_message">Location added successfully!</string>
+    <string name="location_already_exists_error_message">Location already exists!</string>
+    <string name="dialog_message">"Do you want to delete %1$s ?"</string>
+    <string name="dialog_positive_button">Yes</string>
+    <string name="dialog_negative_button">No</string>
+    <string name="request_failed_toast_message">Request failed!</string>
+    <string name="added_current_location_toast_message">"Added current location: %1$s"</string>
+    <string name="drawer_header_text_view">Welcome to WeatherApp!</string>
+    <string name="main_activity_title">WeatherApp</string>
+    <string name="add_location_activity_title">Add a new location!</string>
+    <string name="recent_locations_toolbar_title">Recently added locations!</string>
+    <string name="weather_fragment_loading_failure_toast_message">Could not load weather data, please refresh.</string>
+    <string name="current_location_cannot_be_added_error_toast_message">Current location has already been added, or the location service is offline!</string>
+    <string name="empty_location_string_error_message">Location name cannot be an empty string!</string>
+
+    <string name="current_temperature_message">%1$.1f C</string>
+    <string name="minimum_temperature_message">Min %1$.1f C</string>
+    <string name="maximum_temperature_message">Max %1$.1f C</string>
+    <string name="pressure_message">%1$.2f hpa</string>
+    <string name="wind_speed_message">Wind %1$.1f km/h</string>
+    <string name="wind_direction_message">%1$s</string>
+    <string name="humidity_message">%1$d%% humidity</string>
+    <string name="forecast_toolbar_title">"Forecast: %1$s"</string>
+
+</resources>

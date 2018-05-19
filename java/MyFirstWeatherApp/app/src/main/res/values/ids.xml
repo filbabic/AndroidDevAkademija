@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="toolbar" type="id" />
+    <item name="floating_action_button" type="id" />
+
+    <item name="main_activity_drawer_layout" type="id" />
+    <item name="main_activity_navigation_view" type="id" />
+    <item name="main_activity_view_pager" type="id" />
+    <item name="main_activity_view_pager_tabs" type="id" />
+    <item name="main_activity_frame_layout" type="id" />
+
+    <item name="menu_add_new_location" type="id" />
+    <item name="menu_browse_recent_locations" type="id" />
+
+    <item name="weather_display_current_temperature_text_view" type="id" />
+    <item name="weather_display_pressure_text_view" type="id" />
+    <item name="weather_display_wind_text_view" type="id" />
+    <item name="weather_display_detailed_description_text_view" type="id" />
+    <item name="weather_display_weather_icon_image_view" type="id" />
+    <item name="weather_display_forecast_time_of_day_text_view" type="id" />
+    <item name="weather_fragment_min_temperature_text_view" type="id" />
+    <item name="weather_fragment_max_temperature_text_view" type="id" />
+    <item name="weather_fragment_center_linear_layout" type="id" />
+    <item name="weather_fragment_pressure_and_wind_details_linear_layout" type="id" />
+    <item name="forecast_fragment_humidity_and_pressure_details_linear_layout" type="id" />
+    <item name="forecast_fragment_wind_details_linear_layout" type="id" />
+    <item name="weather_display_wind_direction_text_view" type="id" />
+    <item name="weather_display_humidity_text_view" type="id" />
+
+    <item name="add_location_activity_frame_layout" type="id" />
+    <item name="fragment_add_location_enter_city_edit_text" type="id" />
+    <item name="fragment_add_location_button" type="id" />
+
+    <item name="forecast_display_activity_frame_layout" type="id" />
+    <item name="forecast_fragment_recycler_view" type="id" />
+    <item name="forecast_fragment_frame_layout" type="id" />
+    <item name="forecast_fragment_floating_action_button" type="id" />
+
+    <item name="browse_locations_activity_frame_layout" type="id" />
+    <item name="browse_locations_recycler_view" type="id" />
+    <item name="location_list_item_text_view" type="id" />
+
+</resources>
