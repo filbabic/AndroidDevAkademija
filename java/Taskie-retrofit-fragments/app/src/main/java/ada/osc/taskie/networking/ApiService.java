@@ -24,4 +24,6 @@ public interface ApiService {
     @GET("api/note/")
     Call<TaskList> getTasks(@Header("authorization") String header);
 
+    @GET("api/note/favorite")
+    Call<TaskList> getFavoriteTasks(@Header("authorization") String token);
 }

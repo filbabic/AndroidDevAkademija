@@ -1,4 +1,4 @@
-package ada.osc.taskie.ui.tasks.fragments;
+package ada.osc.taskie.ui.tasks.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

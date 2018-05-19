@@ -31,6 +31,11 @@ public class ApiInteractorImpl implements ApiInteractor {
     }
 
     @Override
+    public void getFavoriteTasks(Callback<TaskList> callback, String token) {
+        apiService.getFavoriteTasks(token).enqueue(callback);
+    }
+
+    @Override
     public void addNewTask(Task task, Callback<Task> callback, String token) {
         apiService.postNewTask(token, task).enqueue(callback);
     }

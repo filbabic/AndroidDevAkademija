@@ -14,5 +14,7 @@ public interface ApiInteractor {
 
     void getTasks(Callback<TaskList> callback, String token);
 
+    void getFavoriteTasks(Callback<TaskList> callback, String token);
+
     void addNewTask(Task task, Callback<Task> callback, String token);
 }

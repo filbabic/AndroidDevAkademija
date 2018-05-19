@@ -1,4 +1,4 @@
-package ada.osc.taskie.ui.tasks.fragments;
+package ada.osc.taskie.ui.tasks.favorite;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,13 +13,15 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+import ada.osc.taskie.App;
 import ada.osc.taskie.R;
 import ada.osc.taskie.model.Task;
 import ada.osc.taskie.model.TaskList;
 import ada.osc.taskie.networking.ApiService;
 import ada.osc.taskie.networking.RetrofitUtil;
+import ada.osc.taskie.presentation.FavoriteTaskPresenter;
 import ada.osc.taskie.util.SharedPrefsUtil;
-import ada.osc.taskie.ui.tasks.TaskAdapter;
+import ada.osc.taskie.ui.tasks.adapter.TaskAdapter;
 import ada.osc.taskie.listener.TaskClickListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,12 +30,14 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class FavoriteTasksFragment extends Fragment {
+public class FavoriteTasksFragment extends Fragment implements FavoriteTasksContract.View, TaskClickListener {
 
     @BindView(R.id.tasks)
     RecyclerView tasks;
 
     private TaskAdapter taskAdapter;
+
+    private FavoriteTasksContract.Presenter presenter;
 
     @Nullable
     @Override
@@ -46,56 +50,48 @@ public class FavoriteTasksFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
 
+        presenter = new FavoriteTaskPresenter(App.getPreferences(), App.getApiInteractor());
+        presenter.setView(this);
+
+        taskAdapter = new TaskAdapter(this);
         tasks.setLayoutManager(new LinearLayoutManager(getActivity()));
         tasks.setItemAnimator(new DefaultItemAnimator());
-
-
-        taskAdapter = new TaskAdapter(new TaskClickListener() {
-            @Override
-            public void onClick(Task task) {
-
-            }
-
-            @Override
-            public void onLongClick(Task task) {
-
-            }
-        });
-
         tasks.setAdapter(taskAdapter);
-
-        getTasksFromServer();
     }
 
-    private void getTasksFromServer() {
-        Retrofit retrofit = RetrofitUtil.createRetrofit();
-        ApiService apiService = retrofit.create(ApiService.class);
-
-        Call<TaskList> taskListCall = apiService
-                .getTasks(SharedPrefsUtil.getPreferencesField(getActivity()
-                        , SharedPrefsUtil.TOKEN));
-
-        taskListCall.enqueue(new Callback<TaskList>() {
-            @Override
-            public void onResponse(Call<TaskList> call, Response<TaskList> response) {
-                if (response.isSuccessful()) {
-                    updateTasksDisplay(response.body().mTaskList);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<TaskList> call, Throwable t) {
-
-            }
-        });
+    @Override
+    public void onStart() {
+        super.onStart();
+        presenter.getTasks();
     }
 
-
-    private void updateTasksDisplay(List<Task> taskList) {
-        taskAdapter.updateTasks(taskList);
-        for (Task t : taskList) {
-            Log.d("taskovi", t.getTitle());
-        }
+    @Override
+    public void showTasks(List<Task> tasks) {
+        taskAdapter.updateTasks(tasks);
     }
 
+    @Override
+    public void showMoreTasks(List<Task> tasks) {
+
+    }
+
+    @Override
+    public void onTaskRemoved(String taskId) {
+
+    }
+
+    @Override
+    public void onTaskFavoriteStateChanged(String taskId) {
+
+    }
+
+    @Override
+    public void onClick(Task task) {
+
+    }
+
+    @Override
+    public void onLongClick(Task task) {
+
+    }
 }
