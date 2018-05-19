@@ -1,4 +1,4 @@
-package ada.osc.taskie.view;
+package ada.osc.taskie.ui;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

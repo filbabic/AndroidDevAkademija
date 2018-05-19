@@ -1,4 +1,4 @@
-package ada.osc.taskie.view;
+package ada.osc.taskie.ui.tasks;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -13,6 +13,7 @@ import java.util.List;
 
 import ada.osc.taskie.R;
 import ada.osc.taskie.model.Task;
+import ada.osc.taskie.listener.TaskClickListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

@@ -1,4 +1,4 @@
-package ada.osc.taskie.view;
+package ada.osc.taskie.ui.tasks;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,11 +12,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ada.osc.taskie.R;
-import ada.osc.taskie.TaskRepository;
+import ada.osc.taskie.persistance.TaskRepository;
 import ada.osc.taskie.model.Task;
-import ada.osc.taskie.view.fragments.AllTasksFragment;
-import ada.osc.taskie.view.fragments.FavoriteTasksFragment;
-import ada.osc.taskie.view.fragments.TasksPagerAdapter;
+import ada.osc.taskie.ui.addTask.NewTaskActivity;
+import ada.osc.taskie.ui.tasks.fragments.AllTasksFragment;
+import ada.osc.taskie.ui.tasks.fragments.FavoriteTasksFragment;
+import ada.osc.taskie.ui.tasks.fragments.TasksPagerAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

@@ -1,4 +1,4 @@
-package ada.osc.taskie.view;
+package ada.osc.taskie.listener;
 
 import ada.osc.taskie.model.Task;
 

@@ -1,9 +1,8 @@
-package ada.osc.taskie;
+package ada.osc.taskie.persistance;
 
 import java.util.List;
 
 import ada.osc.taskie.model.Task;
-import ada.osc.taskie.persistance.FakeDatabase;
 
 public class TaskRepository {
 

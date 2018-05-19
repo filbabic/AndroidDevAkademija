@@ -1,4 +1,4 @@
-package ada.osc.taskie.view.fragments;
+package ada.osc.taskie.ui.tasks.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -19,8 +19,8 @@ import ada.osc.taskie.model.TaskList;
 import ada.osc.taskie.networking.ApiService;
 import ada.osc.taskie.networking.RetrofitUtil;
 import ada.osc.taskie.util.SharedPrefsUtil;
-import ada.osc.taskie.view.TaskAdapter;
-import ada.osc.taskie.view.TaskClickListener;
+import ada.osc.taskie.ui.tasks.TaskAdapter;
+import ada.osc.taskie.listener.TaskClickListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;

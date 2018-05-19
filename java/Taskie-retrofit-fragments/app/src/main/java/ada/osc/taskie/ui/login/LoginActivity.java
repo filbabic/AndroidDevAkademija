@@ -1,4 +1,4 @@
-package ada.osc.taskie.view;
+package ada.osc.taskie.ui.login;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import ada.osc.taskie.model.RegistrationToken;
 import ada.osc.taskie.networking.ApiService;
 import ada.osc.taskie.networking.RetrofitUtil;
 import ada.osc.taskie.util.SharedPrefsUtil;
+import ada.osc.taskie.ui.tasks.TasksActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -27,13 +28,10 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.user_password)
     EditText mUserPwd;
 
-    private Context mContext;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        mContext = this;
         ButterKnife.bind(this);
     }
 
@@ -48,30 +46,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser() {
-        Retrofit retrofit = RetrofitUtil.createRetrofit();
 
-        ApiService apiService = retrofit.create(ApiService.class);
-
-        RegistrationToken registrationToken = new RegistrationToken();
-        registrationToken.mEmail = mUserEmail.getText().toString();
-        registrationToken.mPassword = mUserPwd.getText().toString();
-
-        final Call<LoginResponse> loginCall = apiService.loginUser(registrationToken);
-        loginCall.enqueue(new Callback<LoginResponse>() {
-            @Override
-            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                if (response.isSuccessful()) {
-                    LoginResponse loginResponse = response.body();
-                    SharedPrefsUtil.storePreferencesField(LoginActivity.this, SharedPrefsUtil.TOKEN, loginResponse.mToken);
-                    startNotesActivity();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<LoginResponse> call, Throwable t) {
-
-            }
-        });
     }
 
     private void startNotesActivity() {

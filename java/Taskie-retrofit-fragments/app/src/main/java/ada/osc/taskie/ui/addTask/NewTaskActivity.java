@@ -1,4 +1,4 @@
-package ada.osc.taskie.view;
+package ada.osc.taskie.ui.addTask;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
