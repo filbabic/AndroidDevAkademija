@@ -35,7 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.button_login)
-    void onLoginButtonClick(){
+    void onLoginButtonClick() {
         startLoginActivity();
     }
 

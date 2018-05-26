@@ -19,11 +19,11 @@ public interface ApiService {
     Call<LoginResponse> loginUser(@Body RegistrationToken registrationToken);
 
     @POST("api/note/")
-    Call<Task> postNewTask(@Header("authorization") String header, @Body Task task);
+    Call<Task> postNewTask(@Body Task task);
 
     @GET("api/note/")
-    Call<TaskList> getTasks(@Header("authorization") String header);
+    Call<TaskList> getTasks();
 
     @GET("api/note/favorite")
-    Call<TaskList> getFavoriteTasks(@Header("authorization") String token);
+    Call<TaskList> getFavoriteTasks();
 }
