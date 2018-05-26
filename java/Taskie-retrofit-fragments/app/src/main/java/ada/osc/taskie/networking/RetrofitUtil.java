@@ -70,6 +70,9 @@ public class RetrofitUtil {
     }
 
     private static OkHttpClient okHttpClient() {
-        return new OkHttpClient.Builder().addInterceptor(provideLoggingInterceptor()).build();
+        return new OkHttpClient.Builder()
+                .addInterceptor(provideLoggingInterceptor())
+                .addInterceptor(provideAuthInterceptor())
+                .build();
     }
 }
