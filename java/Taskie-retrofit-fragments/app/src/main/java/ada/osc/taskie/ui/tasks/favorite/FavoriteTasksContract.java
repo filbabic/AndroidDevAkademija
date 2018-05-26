@@ -3,6 +3,7 @@ package ada.osc.taskie.ui.tasks.favorite;
 import java.util.List;
 
 import ada.osc.taskie.model.Task;
+import ada.osc.taskie.presentation.BasePresenter;
 import ada.osc.taskie.ui.tasks.all.AllTasksContract;
 
 public interface FavoriteTasksContract {
@@ -18,9 +19,7 @@ public interface FavoriteTasksContract {
         void onTaskFavoriteStateChanged(String taskId);
     }
 
-    interface Presenter {
-
-        void setView(FavoriteTasksContract.View favoriteTasksView);
+    interface Presenter extends BasePresenter<FavoriteTasksContract.View> {
 
         void getTasks();
 

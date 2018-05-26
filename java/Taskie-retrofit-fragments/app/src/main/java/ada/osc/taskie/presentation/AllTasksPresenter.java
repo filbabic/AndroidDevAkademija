@@ -31,6 +31,16 @@ public class AllTasksPresenter implements AllTasksContract.Presenter {
     }
 
     @Override
+    public void onStop() {
+
+    }
+
+    @Override
+    public void onStart() {
+
+    }
+
+    @Override
     public void getTasks() {
         apiInteractor.getTasks(getAllTasksCallback(), preferences.getString(SharedPrefsUtil.TOKEN, ""));
     }

@@ -31,6 +31,16 @@ public class FavoriteTaskPresenter implements FavoriteTasksContract.Presenter {
     }
 
     @Override
+    public void onStop() {
+
+    }
+
+    @Override
+    public void onStart() {
+
+    }
+
+    @Override
     public void getTasks() {
         apiInteractor.getFavoriteTasks(getFavoriteTasksCallback(), preferences.getString(SharedPrefsUtil.TOKEN, ""));
     }

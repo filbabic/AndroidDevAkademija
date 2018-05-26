@@ -44,8 +44,6 @@
             android:layout_gravity="center"
             android:text="Register" />
 
-
-
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
