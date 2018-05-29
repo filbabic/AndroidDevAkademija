@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,19 +15,11 @@ import java.util.List;
 import ada.osc.taskie.App;
 import ada.osc.taskie.R;
 import ada.osc.taskie.model.Task;
-import ada.osc.taskie.model.TaskList;
-import ada.osc.taskie.networking.ApiService;
-import ada.osc.taskie.networking.RetrofitUtil;
 import ada.osc.taskie.presentation.FavoriteTaskPresenter;
-import ada.osc.taskie.util.SharedPrefsUtil;
-import ada.osc.taskie.ui.tasks.adapter.TaskAdapter;
 import ada.osc.taskie.listener.TaskClickListener;
+import ada.osc.taskie.ui.tasks.adapter.TaskAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class FavoriteTasksFragment extends Fragment implements FavoriteTasksContract.View, TaskClickListener {
 
@@ -53,7 +44,7 @@ public class FavoriteTasksFragment extends Fragment implements FavoriteTasksCont
         presenter = new FavoriteTaskPresenter(App.getPreferences(), App.getApiInteractor());
         presenter.setView(this);
 
-        taskAdapter = new TaskAdapter(this);
+//        taskAdapter = new TaskAdapter(this);
         tasks.setLayoutManager(new LinearLayoutManager(getActivity()));
         tasks.setItemAnimator(new DefaultItemAnimator());
         tasks.setAdapter(taskAdapter);
@@ -67,7 +58,7 @@ public class FavoriteTasksFragment extends Fragment implements FavoriteTasksCont
 
     @Override
     public void showTasks(List<Task> tasks) {
-        taskAdapter.updateTasks(tasks);
+        taskAdapter.setData(tasks);
     }
 
     @Override

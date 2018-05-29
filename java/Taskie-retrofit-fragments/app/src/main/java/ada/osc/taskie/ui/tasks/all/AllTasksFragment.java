@@ -16,19 +16,10 @@ import java.util.List;
 import ada.osc.taskie.App;
 import ada.osc.taskie.R;
 import ada.osc.taskie.model.Task;
-import ada.osc.taskie.model.TaskList;
-import ada.osc.taskie.networking.ApiService;
-import ada.osc.taskie.networking.RetrofitUtil;
 import ada.osc.taskie.presentation.AllTasksPresenter;
-import ada.osc.taskie.util.SharedPrefsUtil;
-import ada.osc.taskie.ui.tasks.adapter.TaskAdapter;
 import ada.osc.taskie.listener.TaskClickListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class AllTasksFragment extends Fragment implements AllTasksContract.View, TaskClickListener {
 

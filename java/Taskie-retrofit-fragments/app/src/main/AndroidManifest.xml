@@ -23,6 +23,7 @@
         <activity android:name=".ui.addTask.NewTaskActivity" />
         <activity android:name=".ui.tasks.TasksActivity" />
         <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.details.TaskDetailsActivity" />
     </application>
 
 </manifest>
