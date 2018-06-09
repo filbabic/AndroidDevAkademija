@@ -33,12 +33,13 @@ public class RegisterPresenterImpl implements RegisterPresenter {
         }
     }
 
-    private void createNewUser(RegistrationToken token) {
+    protected void createNewUser(RegistrationToken token) {
         interactor.registerUser(token, getRegisterCallback());
     }
 
     private Callback<RegistrationToken> getRegisterCallback() {
         return new Callback<RegistrationToken>() {
+
             @Override
             public void onResponse(Call<RegistrationToken> call, Response<RegistrationToken> response) {
                 if (response.isSuccessful() && response.body() != null) {
@@ -52,6 +53,4 @@ public class RegisterPresenterImpl implements RegisterPresenter {
             }
         };
     }
-
-
 }

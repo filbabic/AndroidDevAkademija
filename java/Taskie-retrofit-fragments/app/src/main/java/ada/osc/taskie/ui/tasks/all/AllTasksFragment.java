@@ -18,6 +18,7 @@ import ada.osc.taskie.R;
 import ada.osc.taskie.model.Task;
 import ada.osc.taskie.presentation.AllTasksPresenter;
 import ada.osc.taskie.listener.TaskClickListener;
+import ada.osc.taskie.ui.tasks.adapter.TaskAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -44,7 +45,7 @@ public class AllTasksFragment extends Fragment implements AllTasksContract.View,
         presenter = new AllTasksPresenter(App.getApiInteractor(), App.getPreferences());
         presenter.setView(this);
 
-        taskAdapter = new TaskAdapter(this);
+//        taskAdapter = new TaskAdapter(this);
 
         tasks.setLayoutManager(new LinearLayoutManager(getActivity()));
         tasks.setItemAnimator(new DefaultItemAnimator());
@@ -58,7 +59,7 @@ public class AllTasksFragment extends Fragment implements AllTasksContract.View,
     }
 
     private void updateTasksDisplay(List<Task> taskList) {
-        taskAdapter.updateTasks(taskList);
+//        taskAdapter.updateTasks(taskList);
         for (Task t : taskList) {
             Log.d("taskovi", t.getTitle());
         }
@@ -66,7 +67,7 @@ public class AllTasksFragment extends Fragment implements AllTasksContract.View,
 
     @Override
     public void showTasks(List<Task> tasks) {
-        taskAdapter.updateTasks(tasks);
+//        taskAdapter.updateTasks(tasks);
     }
 
     @Override
@@ -76,7 +77,7 @@ public class AllTasksFragment extends Fragment implements AllTasksContract.View,
 
     @Override
     public void onTaskRemoved(String taskId) {
-        taskAdapter.removeTask(taskId);
+//        taskAdapter.removeTask(taskId);
     }
 
     @Override

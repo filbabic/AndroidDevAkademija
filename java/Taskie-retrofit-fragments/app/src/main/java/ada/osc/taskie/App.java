@@ -16,9 +16,17 @@ public class App extends Application {
 
     private static SharedPreferences preferences;
 
+    private static Context context;
+
+    public static Context getInstance() {
+        return context;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
+
+        context = this;
 
         final Retrofit retrofit = RetrofitUtil.createRetrofit();
         final ApiService apiService = retrofit.create(ApiService.class);
